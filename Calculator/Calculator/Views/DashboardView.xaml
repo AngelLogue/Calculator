@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Calculator.ViewModels"
+             x:Class="Calculator.Views.DashboardView">
+
+    <ContentPage.BindingContext>
+        <vm:DashboardViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        
+        <Grid
+            BackgroundColor="#1C8EFF"
+            Padding="15"
+            >
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+
+            <StackLayout
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Grid.Row="0"
+                >
+
+                <Label
+                    x:Name="resultLabel"
+                    FontAttributes="Bold"
+                    FontSize="72"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Result}"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand"
+                    />
+
+            </StackLayout>
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="PERCENT"
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="%"
+                >
+
+            </Button>
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="CLEAR"
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="C"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="DIVIDE"
+                Grid.Column="2"
+                Grid.Row="1"
+                Text="/"
+                />
+            
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="BACK_SPACE"
+                Grid.Column="3"
+                Grid.Row="1"
+                Text="⌫"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="7"
+                Grid.Column="0"
+                Grid.Row="2"
+                Text="7"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="8"
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="8"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="9"
+                Grid.Column="2"
+                Grid.Row="2"
+                Text="9"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="MULTIPLY"
+                Grid.Column="3"
+                Grid.Row="2"
+                Text="x"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="4"
+                Grid.Column="0"
+                Grid.Row="3"
+                Text="4"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="5"
+                Grid.Column="1"
+                Grid.Row="3"
+                Text="5"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="6"
+                Grid.Column="2"
+                Grid.Row="3"
+                Text="6"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="MINUS"
+                Grid.Column="3"
+                Grid.Row="3"
+                Text="-"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="1"
+                Grid.Column="0"
+                Grid.Row="4"
+                Text="1"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="2"
+                Grid.Column="1"
+                Grid.Row="4"
+                Text="2"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="3"
+                Grid.Column="2"
+                Grid.Row="4"
+                Text="3"
+                />
+
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="PLUS"
+                Grid.Column="3"
+                Grid.Row="4"
+                Text="+"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="PN"
+                Grid.Column="0"
+                Grid.Row="5"
+                Text="±"
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapNumberCommand}"
+                CommandParameter="0"
+                Grid.Column="1"
+                Grid.Row="5"
+                Text="0"
+                />
+
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="POINT"
+                Grid.Column="2"
+                Grid.Row="5"
+                Text="."
+                />
+
+            <Button
+                BackgroundColor="LightGray"
+                Command="{Binding TapOperationCommand}"
+                CommandParameter="RESULT"
+                Grid.Column="3"
+                Grid.Row="5"
+                Text="="
+                />
+
+        </Grid>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
